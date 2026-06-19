@@ -11,6 +11,7 @@
 # Visual Studio
 .vs/
 .idea/
+.vscode/
 *.csproj
 *.unityproj
 *.sln
