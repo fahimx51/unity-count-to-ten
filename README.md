@@ -26,7 +26,7 @@ A simple 2D Unity application with three screens, demonstrating scene navigation
 2. If the app is reopened, the Welcome Screen is automatically skipped since the name already exists.
 3. On the Counter Screen, the user can increment or decrement a value using buttons.
 4. The counter value persists across app sessions using `PlayerPrefs`.
-5. Once the counter reaches 10, it automatically resets to 0 and navigates to the Congratulations Screen.
+5. Once the counter reaches 10, counter value will be saved using `PlayerPrefs` and navigates to the Congratulations Screen.
 6. The Congratulations Screen greets the user by their saved name.
 
 
