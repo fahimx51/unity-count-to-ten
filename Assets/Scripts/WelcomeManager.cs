@@ -4,7 +4,7 @@ using TMPro;
 
 public class WelcomeManager : MonoBehaviour
 {
-    public string playerName;
+    private string playerName;
     public TMP_Text warningText;
     public TMP_InputField nameInputField;
 
@@ -31,6 +31,7 @@ public class WelcomeManager : MonoBehaviour
         warningText.text = "";
 
         PlayerPrefs.SetString("playerName", playerName);
+        PlayerPrefs.Save();
         SceneManager.LoadScene("02_CounterScreen");
     }
 }

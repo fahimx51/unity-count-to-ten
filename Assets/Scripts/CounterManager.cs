@@ -5,13 +5,14 @@ using TMPro;
 public class CounterManager : MonoBehaviour
 {
 
-    public int counter = 0;
+    private int counter;
     public TMP_Text counterText;
 
-    void Start()
+    void Awake()
     {
         counter = PlayerPrefs.GetInt("CounterValue", 0);
         DisplayCounter();
+        CheckForCompletion();
     }
 
     public void IncrementCounter()
@@ -47,8 +48,6 @@ public class CounterManager : MonoBehaviour
     {
         if (counter == 10)
         {
-            counter = 0;
-            SaveCounter();
             SceneManager.LoadScene("03_CongratsScreen");
         }
     }
