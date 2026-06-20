@@ -4,7 +4,7 @@ using TMPro;
 
 public class WelcomeManager : MonoBehaviour
 {
-    public string name;
+    public string playerName;
     public TMP_Text warningText;
     public TMP_InputField nameInputField;
 
@@ -20,9 +20,9 @@ public class WelcomeManager : MonoBehaviour
 
     public void ContinueClicked()
     {
-        name = nameInputField.text.Trim();
+        playerName = nameInputField.text.Trim();
 
-        if (string.IsNullOrEmpty(name))
+        if (string.IsNullOrEmpty(playerName))
         {
             warningText.text = "Please enter a valid name.";
             return;
@@ -30,7 +30,7 @@ public class WelcomeManager : MonoBehaviour
 
         warningText.text = "";
 
-        PlayerPrefs.SetString("playerName", name);
+        PlayerPrefs.SetString("playerName", playerName);
         SceneManager.LoadScene("02_CounterScreen");
     }
 }
