@@ -25,6 +25,7 @@ public class CounterManager : MonoBehaviour
 
     public void DecrementCounter()
     {
+        // Prevent counter from going negative
         if (counter > 0)
         {
             counter--;

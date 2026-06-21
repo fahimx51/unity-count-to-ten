@@ -9,7 +9,6 @@ public class WelcomeManager : MonoBehaviour
     public TMP_InputField nameInputField;
 
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         if (PlayerPrefs.HasKey("playerName"))
@@ -20,10 +19,12 @@ public class WelcomeManager : MonoBehaviour
 
     public void ContinueClicked()
     {
+        // Trim to prevent whitespace-only names from passing validation
         playerName = nameInputField.text.Trim();
 
         if (string.IsNullOrEmpty(playerName))
         {
+            // Show warning message for better UX 
             warningText.text = "Please enter a valid name.";
             return;
         }
