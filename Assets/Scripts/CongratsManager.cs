@@ -6,7 +6,7 @@ public class CongratsManager : MonoBehaviour
     public TMP_Text congratsText;
     private string PlayerName;
 
-    void Awake()
+    void Start()
     {
         PlayerName = PlayerPrefs.GetString("playerName", "Mr X");
         ShowCongratsMessage();
